@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<>
+  <head>
+        <title>corgi companions rehoming and adoption| Home</title>    
+    <style>
+      body {background-color:salmon; text-align: center; padding-top: 50px;}
+      h1 {color:navy;}
+    </style>
+  </head>
+  <>
+   <img src="profile.png" alt="cute corgi puppies for adoption" width="250"> 
+    <h1>corgi companions </h1>
+    <p>for adoption and rehoming.</p>
+  
+  <p>Welcome to our premium Corgi family, where passion, care, and quality come together to raise exceptional companions. Each of our Corgis is nurtured with love, proper care, and early socialization to help them grow into confident, affectionate, and well-adjusted family members. We believe every puppy deserves a loving home and every family deserves a loyal companion that brings happiness, laughter, and unforgettable moments. Our goal is to make the adoption journey a smooth and special experience while connecting our beautiful Corgis with families who will cherish them for a lifetime. </p>
+<p>Our adorable Corgi puppies are ready to find their perfect families.
+Take a look through the pictures below and pick the little companion that steals your heart. Each puppy has its own unique personality and charm, and we would love to help you welcome the perfect Corgi into your home. Feel free to message us for more details or to reserve your favorite puppy.</p>
+</body>
+</html><!DOCTYPE html>
+<!DOCTYPE html>
+< lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corgi Puppies for Adoption</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .puppy-card { background: white; border-radius: 12px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .puppy-card img { border-radius: 8px; }
+    .btn { padding: 10px 15px; border: none; border-radius: 8px; margin-right: 8px; cursor: pointer; font-weight: bold; }
+    .adopt-btn { background: #4CAF50; color: white; }
+    .reserve-btn { background: #FF9800; color: white; }
+
+    /* Popup styles */
+    .popup { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; }
+    .popup-content { background: white; padding: 20px; border-radius: 12px; max-width: 400px; text-align: left; line-height: 1.6; }
+    .close-btn { background: #333; color: white; padding: 8px 12px; border: none; border-radius: 6px; margin-top: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h1>Meet Our Corgi Puppies 🐶</h1>
+
+  <!-- Puppy 1 -->
+  <div class="puppy-card">
+    <img src="corgie1.png" alt="Milo" style="width:100%; max-width:300px;">
+    <h3>Milo</h3>
+    <p>Male, 3 months. Loves to play and cuddle.</p>
+    <button class="btn adopt-btn" onclick="showAdoption('Milo')">Adopt</button>
+    <button class="btn reserve-btn" onclick="showReservation('Milo')">Reserve</button>
+  </div>
+
+  <!-- Puppy 2 -->
+  <div class="puppy-card">
+    <img src="corgie2.png" alt="Luna" style="width:100%; max-width:300px;">
+    <h3>Luna</h3>
+    <p>Female, 4 months. Very calm and smart.</p>
+    <button class="btn adopt-btn" onclick="showAdoption('Luna')">Adopt</button>
+    <button class="btn reserve-btn" onclick="showReservation('Luna')">Reserve</button>
+  </div>
+
+  <!-- Puppy 3 -->
+  <div class="puppy-card">
+    <img src="corgie.png" alt="Rocky" style="width:100%; max-width:300px;">
+    <h3>Rocky</h3>
+    <p>Male, 2 months. Super playful and curious.</p>
+    <button class="btn adopt-btn" onclick="showAdoption('Rocky')">Adopt</button>
+    <button class="btn reserve-btn" onclick="showReservation('Rocky')">Reserve</button>
+  </div>
+
+
+  <!-- POPUP BOX -->
+  <div id="popup" class="popup" onclick="closePopup()">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <h2 id="popup-title"></h2>
+      <div id="popup-text"></div>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+<script>
+const adoptionText = `
+<h3>Our Corgi Adoption Process</h3>
+<p><b>1. Contact Us</b><br>
+Send us a message with the puppy you are interested in, and we will provide more details, pictures, and answer any questions you may have.</p>
+
+<p><b>2. Learn About Your Puppy</b><br>
+We will share information about the puppy’s personality, care needs, and everything you need to know before bringing your new companion home.</p>
+
+<p><b>3. Reserve Your Corgi</b><br>
+Once you are ready, we will guide you through the reservation process and help prepare for your puppy’s transition to your home.</p>
+
+<p><b>4. Welcome Your New Family Member</b><br>
+We stay available to support you as you begin this exciting journey with your new Corgi companion.</p>
+`;
+
+const reservationText = `
+<h3>Our Corgi Reservation Process</h3>
+<p><b>1. Reserve Your Puppy</b><br>
+Pay a small reservation fee to hold your chosen puppy for 7 days.</p>
+<p><b>2. Get Details</b><br>
+We’ll send you more pictures, videos, and vet records.</p>
+<p><b>3. Prepare for Pickup</b><br>
+We’ll help you get ready for your puppy’s transition to your home.</p>
+<p><b>4. Complete Adoption</b><br>
+Come meet your puppy and finalize the adoption!</p>
+`;
+
+function showAdoption(name) {
+  document.getElementById('popup-title').innerText = "Adoption for " + name;
+  document.getElementById('popup-text').innerHTML = adoptionText;
+  document.getElementById('popup').style.display = 'flex';
+}
+
+function showReservation(name) {
+  document.getElementById('popup-title').innerText = "Reservation for " + name;
+  document.getElementById('popup-text').innerHTML = reservationText;
+  document.getElementById('popup').style.display = 'flex';
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+</script>
+
+</body>
+<!-- PUPPY 1 START -->
+  <div class="puppy-card">
+    <img src="tassy.png" alt="Tassy">
+    <h3>Tassy</h3>
+    <p>Male, 3 months. Loves to play and cuddle.</p>
+    
+    <!-- HERE ARE THE 2 BUTTONS -->
+    <button class="btn adopt-btn" onclick="showAdoption('Tassy')">Adopt</button>
+    <button class="btn reserve-btn" onclick="showReservation('Tassy')">Reserve</button>
+  </div>
+  <!-- PUPPY 1 END --><style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .puppy-card { background: white; border-radius: 12px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center; }
+    
+    /* PHOTO SIZE FIXED HERE */
+    .puppy-card img { 
+      width: 100%; 
+      max-width: 300px;  /* card won't be wider than 300px */
+      height: 220px;     /* all photos same height */
+      object-fit: cover; /* crops to fit without stretching */
+      border-radius: 8px; 
+   <!-- PUPPY 3 START -->
+  <div class="puppy-card">
+    <img src="rocky.png" alt="Rocky">
+    <h3>Rocky</h3>
+    <p>Male, 2 months. Super playful and curious.</p>
+    <button class="btn adopt-btn" onclick="showAdoption('Rocky')">Adopt</button>
+    <button class="btn reserve-btn" onclick="showReservation('Rocky')">Reserve</button>
+  </div>
+  <!-- PUPPY 3 END -->
